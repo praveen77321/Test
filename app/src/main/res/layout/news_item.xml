@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dip">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        app:civ_border_width="2dp"
+        app:civ_border_color="@android:color/darker_gray"
+        android:id="@+id/img_news"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="4dp"
+        android:src="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=">"
+        android:textColor="#80000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:padding="4dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@+id/img_news"
+        app:layout_constraintRight_toLeftOf="@+id/text_arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="This should be a long description like this examplesflkfn SDLJFNLJdsnfljnsDFLJNdljfn DlsfnlkdsNFLKnfldLKFNlksnflknF that I'm showing." />
+
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:padding="4dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toRightOf="@+id/img_news"
+        app:layout_constraintRight_toLeftOf="@+id/time"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:ignore="SmallSp"
+        tools:text="Author 123" />
+
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/calendar"
+        android:drawablePadding="4dp"
+        android:padding="4dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/text_arrow"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:ignore="SmallSp"
+        tools:text="12 hours ago" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
